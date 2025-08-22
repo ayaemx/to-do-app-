@@ -1,6 +1,6 @@
 # Coursology Todo App
 
-![Coursology Logo](https://coursology-qbank.com/coursology_logo.svg)
+![Coursology Logo](public/coursology_logo.svg)
 
 A powerful and intuitive todo application designed to help you stay organized and productive.
 
@@ -25,25 +25,25 @@ You can try out the live application here:
 Here are some screenshots of the application. We also have a dark mode - try the app to see it!
 
 ### Home Page
-![Home Page](public/screenshots/screenshot-1.png)
+<img src="public/screenshots/screenshot-2.png" width="50%">
 
 ### Folders (Tree View)
-![Folders (Tree View)](public/screenshots/screenshot-2.png)
+<img src="public/screenshots/screenshot-3.png" width="50%">
 
 ### Tasks
-![Tasks](public/screenshots/screenshot-3.png)
+<img src="public/screenshots/screenshot-1.png" width="50%">
 
 ### Folders (Grid View)
-![Folders (Grid View)](public/screenshots/screenshot-4.png)
+<img src="public/screenshots/screenshot-4.png" width="50%">
 
 ### Calendar (Month View)
-![Calendar (Month View)](public/screenshots/screenshot-5.png)
+<img src="public/screenshots/screenshot-5.png" width="50%">
 
 ### Calendar (Week View)
-![Calendar (Week View)](public/screenshots/screenshot-6.png)
+<img src="public/screenshots/screenshot-7.png" width="50%">
 
 ### Blog
-![Blog](public/screenshots/screenshot-7.png)
+ go to app to see what's new>>>
 
 ## ✨ Features
 
