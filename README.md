@@ -1,6 +1,6 @@
 # Coursology Todo App
 
-![Coursology Logo](https://coursology-qbank.com/coursology_logo.svg)
+![Coursology Logo](public/placeholder-logo.svg)
 
 A powerful and intuitive todo application designed to help you stay organized and productive.
 
@@ -26,15 +26,15 @@ Here are some screenshots of the application. We also have a dark mode - try the
 
 | Home Page                                       | Folders (Tree View)                               | Tasks                                           |
 | ----------------------------------------------- | ------------------------------------------------- | ----------------------------------------------- |
-| ![Home Page](public/screenshots/screenshot-1.png) | ![Folders (Tree View)](public/screenshots/screenshot-2.png) | ![Tasks](public/screenshots/screenshot-3.png) |
+| ![Home Page](screenshots/screenshot-1.png) | ![Folders (Tree View)](screenshots/screenshot-2.png) | ![Tasks](screenshots/screenshot-3.png) |
 
 | Folders (Grid View)                               | Calendar (Month View)                                   | Calendar (Week View)                                  |
 | ------------------------------------------------- | ------------------------------------------------------- | ----------------------------------------------------- |
-| ![Folders (Grid View)](public/screenshots/screenshot-4.png) | ![Calendar (Month View)](public/screenshots/screenshot-5.png) | ![Calendar (Week View)](public/screenshots/screenshot-6.png) |
+| ![Folders (Grid View)](screenshots/screenshot-4.png) | ![Calendar (Month View)](screenshots/screenshot-5.png) | ![Calendar (Week View)](screenshots/screenshot-6.png) |
 
 | Blog                                          |
 | --------------------------------------------- |
-| ![Blog](public/screenshots/screenshot-7.png) |
+| ![Blog](screenshots/screenshot-7.png) |
 
 ## ✨ Features
 
@@ -84,36 +84,3 @@ graph TD
     C -->|Blog| G[Blog Section]
     D -->|Create/Edit/Delete| D
     E -->|Create/Edit/Delete| E
-```
-
-## 🔮 Future Plans
-
-*   **Real-time Collaboration:** Allow multiple users to collaborate on tasks and projects.
-*   **Advanced Filtering and Sorting:** Implement more advanced options for filtering and sorting tasks.
-*   **Reminders and Due Dates:** Add support for setting reminders and due dates for tasks.
-*   **Analytics and Reporting:** Provide users with insights into their productivity.
-*   **Third-Party Integrations:** Integrate with other popular productivity tools.
-
-## 🛠️ Technologies Used
-
-*   [Next.js](https://nextjs.org/) - React Framework
-*   [TypeScript](https://www.typescriptlang.org/) - JavaScript with syntax for types.
-*   [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework.
-*   [Radix UI](https://www.radix-ui.com/) - Unstyled, accessible components for building high‑quality design systems and web apps.
-*   [Framer Motion](https://www.framer.com/motion/) - A production-ready motion library for React.
-*   [Jest](https://jestjs.io/) - A delightful JavaScript Testing Framework.
-*   [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) - Simple and complete testing utilities that encourage good testing practices.
-
-## 🤝 Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1.  Fork the Project
-2.  Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3.  Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4.  Push to the Branch (`git push origin feature/AmazingFeature`)
-5.  Open a Pull Request
-
-
-## ayooya
-
