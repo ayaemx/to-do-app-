@@ -76,19 +76,20 @@ const loadTasksFromStorage = (): Task[] => {
   try {
     const stored = localStorage.getItem(STORAGE_KEY)
     if (stored) {
-      // Sanitize the stored string to remove invalid characters
-      const sanitizedStored = stored.replace(/[^\x20-\x7E]/g, "")
-      const tasks = JSON.parse(sanitizedStored)
-      return tasks.map((task: any) => ({
-        ...task,
-        createdAt: new Date(task.createdAt),
-        updatedAt: new Date(task.updatedAt),
-        dueDate: task.dueDate ? new Date(task.dueDate) : undefined,
-        pinned: !!task.pinned,
-      }))
+      const tasks = JSON.parse(stored)
+      return Array.isArray(tasks)
+        ? tasks.map((task: any) => ({
+            ...task,
+            createdAt: new Date(task.createdAt),
+            updatedAt: new Date(task.updatedAt),
+            dueDate: task.dueDate ? new Date(task.dueDate) : undefined,
+            pinned: !!task.pinned,
+          }))
+        : []
     }
   } catch (error) {
     console.error("Failed to load tasks from storage:", error)
+    return []
   }
   return []
 }

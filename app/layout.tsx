@@ -30,8 +30,8 @@ export default function RootLayout({
       </head>
       <body className={`${GeistSans.variable} ${GeistMono.variable} font-sans`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-          <TaskProvider>
-            <FolderProvider>
+          <FolderProvider>
+            <TaskProvider>
               <AppProvider>
                 <NotificationProvider>
                   <BlogProvider>
@@ -41,8 +41,8 @@ export default function RootLayout({
                   </BlogProvider>
                 </NotificationProvider>
               </AppProvider>
-            </FolderProvider>
-          </TaskProvider>
+            </TaskProvider>
+          </FolderProvider>
         </ThemeProvider>
       </body>
     </html>

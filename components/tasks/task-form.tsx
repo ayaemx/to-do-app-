@@ -10,8 +10,9 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog"
 import { Badge } from "@/components/ui/badge"
+import { Checkbox } from "@/components/ui/checkbox"
 import type { Task, TaskFormData } from "@/types/task"
 import { useTask } from "@/contexts/task-context"
 import { useFolder } from "@/contexts/folder-context"
@@ -31,6 +32,7 @@ export function TaskForm({ isOpen, onClose, task }: TaskFormProps) {
     status: "todo",
     priority: "medium",
     tags: [],
+    pinned: false,
   })
   const [tagInput, setTagInput] = useState("")
   const [errors, setErrors] = useState<Record<string, string>>({})
@@ -45,6 +47,7 @@ export function TaskForm({ isOpen, onClose, task }: TaskFormProps) {
         dueDate: task.dueDate,
         folderId: task.folderId,
         tags: task.tags || [],
+        pinned: task.pinned || false,
       })
     } else {
       setFormData({
@@ -53,6 +56,7 @@ export function TaskForm({ isOpen, onClose, task }: TaskFormProps) {
         status: "todo",
         priority: "medium",
         tags: [],
+        pinned: false,
       })
     }
     setErrors({})
@@ -116,6 +120,9 @@ export function TaskForm({ isOpen, onClose, task }: TaskFormProps) {
       <DialogContent className="sm:max-w-[500px]">
         <DialogHeader>
           <DialogTitle>{task ? "Edit Task" : "Create New Task"}</DialogTitle>
+          <DialogDescription>
+            {task ? "Update the details of your task." : "Fill in the details to create a new task."}
+          </DialogDescription>
         </DialogHeader>
         <motion.form
           initial={{ opacity: 0, y: 20 }}
@@ -245,11 +252,26 @@ export function TaskForm({ isOpen, onClose, task }: TaskFormProps) {
                 {formData.tags.map((tag, index) => (
                   <Badge key={index} variant="secondary" className="flex items-center gap-1">
                     {tag}
-                    <X className="h-3 w-3 cursor-pointer hover:text-red-500" onClick={() => removeTag(tag)} />
+                    <X
+                      className="h-3 w-3 cursor-pointer hover:text-red-500"
+                      onClick={() => removeTag(tag)}
+                      aria-label={`remove tag ${tag}`}
+                    />
                   </Badge>
                 ))}
               </div>
             )}
+          </div>
+
+          <div className="flex items-center space-x-2">
+            <Checkbox
+              id="pin"
+              checked={formData.pinned}
+              onCheckedChange={(checked) =>
+                setFormData((prev) => ({ ...prev, pinned: !!checked }))
+              }
+            />
+            <Label htmlFor="pin">Pin this task</Label>
           </div>
 
           <div className="flex justify-end space-x-2 pt-4">
