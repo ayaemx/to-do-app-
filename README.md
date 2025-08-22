@@ -14,6 +14,28 @@ This project is built with a focus on modularity, scalability, and developer exp
 
 [Read the Code Documentation](./docs/CODE_DOCUMENTATION.md)
 
+## 🚀 Live Demo
+
+You can try out the live application here:
+
+[https://coursology-todo-appp.vercel.app/](https://coursology-todo-appp.vercel.app/)
+
+## 📸 Screenshots
+
+Here are some screenshots of the application. We also have a dark mode - try the app to see it!
+
+| Home Page                                       | Folders (Tree View)                               | Tasks                                           |
+| ----------------------------------------------- | ------------------------------------------------- | ----------------------------------------------- |
+| ![Home Page](public/screenshots/screenshot-1.png) | ![Folders (Tree View)](public/screenshots/screenshot-2.png) | ![Tasks](public/screenshots/screenshot-3.png) |
+
+| Folders (Grid View)                               | Calendar (Month View)                                   | Calendar (Week View)                                  |
+| ------------------------------------------------- | ------------------------------------------------------- | ----------------------------------------------------- |
+| ![Folders (Grid View)](public/screenshots/screenshot-4.png) | ![Calendar (Month View)](public/screenshots/screenshot-5.png) | ![Calendar (Week View)](public/screenshots/screenshot-6.png) |
+
+| Blog                                          |
+| --------------------------------------------- |
+| ![Blog](public/screenshots/screenshot-7.png) |
+
 ## ✨ Features
 
 *   **Task Management:** Create, edit, delete, and track your tasks with ease.

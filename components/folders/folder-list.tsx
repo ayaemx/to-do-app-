@@ -24,6 +24,8 @@ export function FolderList() {
   const [searchQuery, setSearchQuery] = useState("")
   const [selectedFolder, setSelectedFolder] = useState<Folder | null>(null)
 
+  const selectedFolderId = selectedFolder ? selectedFolder.id : undefined
+
   const filteredFolders = folders.filter(
     (folder) =>
       folder.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -207,7 +209,7 @@ export function FolderList() {
                 onEditFolder={handleEditFolder}
                 onDeleteFolder={handleDeleteFolder}
                 onCreateChild={handleCreateChild}
-                selectedFolderId={selectedFolder?.id}
+                selectedFolderId={selectedFolderId}
               />
             </CardContent>
           </Card>
