@@ -1,0 +1,12 @@
+.developer-glow {
+  animation: developer-glow-animation 2s ease-in-out infinite;
+}
+
+@keyframes developer-glow-animation {
+  0%, 100% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff4da6, 0 0 20px #ff4da6, 0 0 25px #ff4da6, 0 0 30px #ff4da6, 0 0 35px #ff4da6;
+  }
+  50% {
+    text-shadow: 0 0 10px #fff, 0 0 15px #ff4da6, 0 0 20px #ff4da6, 0 0 25px #ff4da6, 0 0 30px #ff4da6, 0 0 35px #ff4da6, 0 0 40px #ff4da6;
+  }
+}
